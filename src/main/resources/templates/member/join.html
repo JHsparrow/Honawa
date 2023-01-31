@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layouts/layout_member}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<th:block layout:fragment="css">
+	
+</th:block>
+<th:block layout:fragment="js">
+	
+</th:block>
+</head>
+<body>
+	<div layout:fragment="content">
+		<div class="container">
+			<div class="d-flex justify-content-center h-100">
+				<div class="card">
+					<div class="card-header text-center">
+						<h3>회원가입</h3>
+					</div>
+					<div class="card-body">
+						<form role="form" th:object="${memberFormDto}">
+							<div class="mb-3">
+								<label th:for="id">아아디</label>
+								<input type="text" class="form-control" th:field="*{id}" placeholder="영문 4자 이상, 최대 20자">
+							</div>
+							<div class="mb-3">
+								<label th:for="name">이름</label>
+								<input type="text" class="form-control" th:field="*{name}" placeholder="이름">
+							</div>
+							<div class="mb-3">
+								<label th:for="password">비밀번호</label>
+								<input type="password" class="form-control" th:field="*{password}" placeholder="숫자,영문 8자 이상, 최대 20자">
+							</div>
+							<div class="mb-3">
+								<label for="pwd_check">비밀번호 확인</label>
+								<input type="password" class="form-control" id="pwd_check" placeholder="숫자,영문 8자 이상, 최대 20자">
+							</div>
+							<div class="mb-3">
+								<label th:for="email">이메일</label>
+								<input type="text" class="form-control" th:field="*{email}" placeholder="이메일">
+							</div>
+							<div class="mb-3">
+								<label th:for="phone">핸드폰</label>
+								<input type="text" class="form-control" th:field="*{phone}" placeholder=" -없이 숫자만 입력 ">
+							</div>
+							<div class="form-group text-center mb-3">
+								<input type="submit" value="회원가입" class="btn btn-primary login_btn col-12">
+							</div>
+						</form>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
