@@ -5,6 +5,8 @@
   position:relative;
   transition-duration: .3s;
   transition-property:transform;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 26px;
 }
 nav{
 	width: 80vw;
@@ -13,7 +15,12 @@ nav{
 
 
 .hoverable:hover, .hoverable:active, .hoverable:focus{
-  transform: translateY(-5px);
+	background: linear-gradient(90deg, #E53B38 0%, #9849FD 100%) border-box;
+	background-size: 400% 400%;
+	animation: gradient 3s ease infinite;
+ 	transform: translateY(-5px);
+  	opacity: 1;
+  	border-radius: 10px
 }
 .hoverable:hover:before, .hoverable:active:before, .hoverable:focus:before{
   opacity: 1;
@@ -21,16 +28,10 @@ nav{
 }
 .search__box{
 	border: 2px solid transparent;
-	
 	background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #E53B38 0%, #9849FD 100%) border-box;
-	
-	
-	
-	
-	
 }
-.search__box:hover, #form1:focus {
-	background: linear-gradient(#fff, #fff) padding-box, linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab 100%) border-box;
+.search__box:hover, .search__box:focus-within {
+	background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #E53B38 0%, #9849FD 100%) border-box;
 	background-size: 400% 400%;
 	animation: gradient 3s ease infinite;
 }
@@ -51,11 +52,13 @@ nav{
 .search__box button{ border: none; margin-left: 25px;}
 
 .sub__nav li{
-	width: 20vw;
+	width: 13vw;
     text-align: center;
 }
 	
-	
+.search__btn:hover{
+	background: linear-gradient(-45deg, #E53B38 0%, #9849FD 100%) padding-box, linear-gradient(90deg, #E53B38 0%, #9849FD 100%) border-box;
+}	
 search__boxa:hover, a:focus { animation-duration: 3s; animation-name: rainbowLink; animation-iteration-count: infinite; } 
 @keyframes rainbowLink {     
  0% { color: #ff2a2a; }

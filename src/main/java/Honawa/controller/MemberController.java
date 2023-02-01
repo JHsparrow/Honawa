@@ -22,4 +22,16 @@ public class MemberController {
 		model.addAttribute("memberFormDto", new MemberFormDto());
 		return "member/join";
 	}
+	
+	@GetMapping(value="findId")
+	public String FindId(Model model) {
+		model.addAttribute("memberFormDto", new MemberFormDto());
+		return "member/findId";
+	}
+	
+	@GetMapping(value="findPwd")
+	public String FindPwd(Model model) {
+		model.addAttribute("memberFormDto", new MemberFormDto());
+		return "member/findPwd";
+	}
 }

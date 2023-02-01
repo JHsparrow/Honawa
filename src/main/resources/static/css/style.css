@@ -54,3 +54,92 @@ li{list-style: none;}
 .main__card a:hover {
 	outline:1px solid gray;
 }
+
+.item__section{
+	padding: 160px 120px;
+}
+
+.last_justify_center{
+    text-align-last: justify;
+}
+
+.rep_list01{color: #fbcf79;}
+.rep_list02{color: #71fb58;}
+.rep_list03{color: #b698ed;}
+.rep_btn{
+	    position: relative;
+    display: inline-block;
+    font-size: calc(10 * 1px);
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.2s;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    border-width: 2px;
+    border-style: solid;
+    padding: 15px 26px;
+    border-radius: 64px;
+    opacity: 0.7;
+}
+
+.rep_btn:hover{
+	padding: 18px 45px;
+	font-size: 16px !important;
+    opacity: 1;
+    visibility: visible;
+}
+.rep_btn[data-hover]:hover:before {
+    transform: translateY(-50%);
+    opacity: 1;
+    visibility: visible;
+}
+
+.mx-8{
+	margin-right: 8rem!important;
+    margin-left: 8rem!important;
+}
+
+.item-wing__wrap{
+	position: relative;
+    width: 1072px;
+    margin: 0 auto;
+}
+.item-wing__right{
+	font-size: 13px;
+    letter-spacing: -0.2px;
+    width: 250px;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    overflow: hidden;
+    margin-left: 650px;
+    z-index: 2;
+}
+.fix {
+    position: fixed;
+    top: 65px;
+}
+
+.wing__box{
+	background: white;
+	height: 800px;
+}
+.wing__listBox{
+	position: relative;
+    height: 800px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border: solid #33383e;
+    border-width: 0 1px;
+} 
+.wing__list{
+	background: gray;
+    margin: 20px auto;
+    padding:10px;
+    width: 90%;
+}

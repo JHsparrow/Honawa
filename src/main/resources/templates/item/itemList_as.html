@@ -1,0 +1,101 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layouts/layout1}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<th:block layout:fragment="css">
+	<style>
+		.btn-primary{
+			padding: 3px 15px;
+		}
+	</style>
+</th:block>
+<th:block layout:fragment="js">
+	
+</th:block>
+</head>
+<body>
+	<div layout:fragment="content" class="bg-dark text-light">
+		<div class="item-wing__wrap">
+			<div class="item-wing__right">
+				<div class="wing__box">
+					<div class="wing__listBox text-black">
+						<p class="text-center m-4">내 장바구니</p>
+						<div class="wing__list">
+							<p>CPU</p>
+							<p>6티어 상급 CPU</p>
+							<button class="btn btn-primary">해제</button>
+						</div>
+						<div class="wing__list">
+							<p>CPU</p>
+							<p>6티어 상급 CPU</p>
+							<button class="btn btn-primary">해제</button>
+						</div>
+						<div class="wing__list">
+							<p>CPU</p>
+							<p>6티어 상급 CPU</p>
+							<button class="btn btn-primary">해제</button>
+						</div>
+						<div class="wing__list">
+							<p>CPU</p>
+							<p>6티어 상급 CPU</p>
+							<button class="btn btn-primary">해제</button>
+						</div>
+						<div class="wing__list">
+							<p>CPU</p>
+							<p>6티어 상급 CPU</p>
+							<button class="btn btn-primary">해제</button>
+						</div>
+						<div class="wing__list">
+							<p>CPU</p>
+							<p>6티어 상급 CPU</p>
+							<button class="btn btn-primary">해제</button>
+						</div>
+						<div class="wing__list">
+							<p>CPU</p>
+							<p>6티어 상급 CPU</p>
+							<button class="btn btn-primary">해제</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid item__section text-center d-flex justify-content-center">
+			<div>
+				<p class="rep_list01">최고의 티어제품</p>
+				<img class="col-3 mx-8" height="300" src="/images/C01.png" >
+				<p class="rep_list01">1티어 상급 CPU</p>
+				<p class="rep_btn">자세히 보기</p>
+			</div>
+			<div>
+				<p class="rep_list02">최고의 갓성비제품</p>
+				<img class="col-3 mx-8" height="300" src="/images/C01.png" >
+				<p class="rep_list02">1티어 상급 CPU</p>
+				<p class="rep_btn">자세히 보기</p>
+			</div>
+			<div>
+				<p class="rep_list03">최고의 인기제품</p>
+				<img class="col-3 mx-8" height="300" src="/images/C01.png" >
+				<p class="rep_list03">1티어 상급 CPU</p>
+				<p class="rep_btn">자세히 보기</p>
+			</div>
+		</div>
+		<div class="container-fluid item__section text-center">
+		
+		</div>
+		<script>
+		$(window).scroll(function () {
+			var height = $(document).scrollTop();
+			if(height>=245){
+				$('.item-wing__right').addClass('fix');
+			}
+			else if(height<245){
+				$('.item-wing__right').removeClass('fix')
+			}
+		}); 
+		
+		</script>
+	</div>
+</body>
+</html>

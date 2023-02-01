@@ -14,7 +14,37 @@
 </head>
 <body>
 	<div layout:fragment="content">
-	
+		<div class="container">
+			<div class="d-flex justify-content-center h-100">
+				<div class="card">
+					<div class="card-header text-center">
+						<h3>로그인</h3>
+					</div>
+					<div class="card-body">
+						<form>
+							<div class="mb-3">
+								<input type="text" class="form-control" placeholder="아이디">
+							</div>
+							<div class="mb-3">
+								<input type="password" class="form-control" placeholder="비밀번호">
+							</div>
+							<div class="row align-items-center remember mb-3">
+								<input type="checkbox">아이디 기억
+							</div>
+							<div class="form-group text-center mb-3">
+								<input type="submit" value="로그인" class="btn btn-warning login_btn col-12">
+							</div>
+							<div class="text-center btn__justify">
+								<a href="/members/findId" class="col-4"><button type="button" class="btn btn-primary">아이디 찾기</button></a>
+								<a href="/members/findPwd" class="col-4"><button type="button" class="btn btn-primary">비밀번호 찾기</button></a>
+								<a href="/members/join" class="col-4"><button type="button" class="btn btn-primary">회원가입</button></a>
+							</div>
+						</form>
+					</div>
+					
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

@@ -11,25 +11,19 @@
 	
 </th:block>
 <th:block layout:fragment="js">
-	
 </th:block>
 </head>
 <body>
-	<div layout:fragment="content" style="background:black;">
+	<div layout:fragment="content" class="bg-dark">
+	
 		<div class="swiper mySwiper">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide">완제품 사진1</div>
+				<div class="swiper-slide"><a><img src="/images/fitem01.jpg"></a></div>
+				<div class="swiper-slide"><a><img src="/images/fitem02.png"></a></div>
 				<div class="swiper-slide">완제품 사진2</div>
 				<div class="swiper-slide">완제품 사진3</div>
 				<div class="swiper-slide">완제품 사진4</div>
-				<div class="swiper-slide">완제품 사진5</div>
-				<div class="swiper-slide">완제품 사진6</div>
-				<div class="swiper-slide">완제품 사진7</div>
-				<div class="swiper-slide">완제품 사진8</div>
 			</div>
-			<div class="swiper-button-next"></div>
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-pagination"></div>
 		</div>
 		<div class="main__container">
 			<div class="service">
@@ -37,7 +31,7 @@
 					<div class="sc text-center">
 						<p class="">고객센터</p>
 						<div>
-							<p>000-000-0000</p>
+							<p class="counter">12333</p>
 							<p>상담시간  : 09:00 ~ 18:00</p>
 							<div class="d-flex justify-content-center text-center">
 								<a class="service_link servic_c p-2"><i class="fa-solid fa-headset fa-2xl"></i><p></p>고객센터</a>
@@ -66,7 +60,7 @@
 							<div class="card-body">
 								<h5 class="card-title text-light">물건 1호</h5>
 								<p class="card-text text-light">물건 설명</p>
-								<h3 class="card-title text-danger">1000000원</h3>
+								<h3 class="card-title text-danger">1000000</h3>
 							</div>
 						</a>
 					</div>
@@ -77,7 +71,7 @@
 							<div class="card-body">
 								<h5 class="card-title text-light">물건 1호</h5>
 								<p class="card-text text-light">물건 설명</p>
-								<h3 class="card-title text-danger">1000000원</h3>
+								<h3 class="card-title text-danger">1000000</h3>
 							</div>
 						</a>
 					</div>
@@ -88,7 +82,7 @@
 							<div class="card-body">
 								<h5 class="card-title text-light">물건 1호</h5>
 								<p class="card-text text-light">물건 설명</p>
-								<h3 class="card-title text-danger">1000000원</h3>
+								<h3 class="card-title text-danger">1000000</h3>
 							</div>
 						</a>
 					</div>
@@ -99,7 +93,7 @@
 							<div class="card-body">
 								<h5 class="card-title text-light">물건 1호</h5>
 								<p class="card-text text-light">물건 설명</p>
-								<h3 class="card-title text-danger">1000000원</h3>
+								<h3 class="card-title text-danger">1000000</h3>
 							</div>
 						</a>
 					</div>
@@ -110,7 +104,7 @@
 							<div class="card-body">
 								<h5 class="card-title text-light">물건 1호</h5>
 								<p class="card-text text-light">물건 설명</p>
-								<h3 class="card-title text-danger">1000000원</h3>
+								<h3 class="card-title text-danger">1000000</h3>
 							</div>
 						</a>
 					</div>
@@ -119,13 +113,19 @@
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 		<script>
+			$('.counter').counterUp({
+			    delay: 10,
+			    time: 1000
+			});
+			
 			var swiper = new Swiper(".mySwiper", {
-		      slidesPerView: 3,
-		      spaceBetween: 30,
-		      loop:true,
-		      autoplay: {    
-		          delay: 5000,
-		          disableOnInteraction: false, 
+				effect : 'coverflow', 
+		      	slidesPerView: 3,
+		      	spaceBetween: 30,
+		      	loop:true,
+		      	autoplay: {    
+		        	delay: 5000,
+		          	disableOnInteraction: false, 
 		        },
 		    });
 		</script>
