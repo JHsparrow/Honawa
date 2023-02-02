@@ -1,0 +1,77 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layouts/layout_item}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<th:block layout:fragment="css">
+	<style>
+		.btn-primary{
+			padding: 3px 15px;
+		}
+	</style>
+</th:block>
+<th:block layout:fragment="js">
+	
+</th:block>
+</head>
+<body>
+	<div layout:fragment="content" class="bg-dark text-light">
+		<div class="container-fluid mt-0 cart__container">
+			<span class="detail__title">상품명</span>
+			<div class="w-80" >
+				<div class="detail__img-con d-flex">
+					<div class="card text-bg-secondary mx-4" style="width: 400px;">
+						<img src="/images/fitem01.jpg" class="card-img-top" alt="..." height="220">
+						<div class="card-body">
+					    	<h5 class="card-title cart__desc-title">CPU</h5>
+					    	<div class="d-flex">
+						    	<div>
+							    	<p class="card-text cart__desc pe-5">제품명</p>
+							    	<p class="card-text cart__desc pe-5">필요전력</p>
+							    	<p class="card-text cart__desc pe-5">가격</p>
+						    	</div>
+						    	<div>
+						    		<p class="card-text cart__desc pe-5">|</p>
+						    		<p class="card-text cart__desc pe-5">|</p>
+						    		<p class="card-text cart__desc pe-5">|</p>
+						    	</div>
+						    	<div>
+						    		<p class="card-text cart__desc">5티어 상급</p>
+							    	<p class="card-text cart__desc"><i class="fa-solid fa-bolt pe-3"></i>300</p>
+							    	<p class="card-text cart__desc"><i class="fa-solid fa-won-sign pe-3"></i>1,300,000</p>
+						    	</div>
+					    	</div>
+					  	</div>
+					</div>
+					
+				</div>
+				<div class="detail__img-con d-flex justify-content-center my-2">
+					<div class="card text-bg-secondary mx-4" style="width: 400px;">
+						<img src="/images/fitem01.jpg" class="card-img-top" alt="..." height="220">
+						<div class="card-body">
+					    	<h5 class="card-title">CPU 5티어 상급</h5>
+					    	<p class="card-text">상품 설명 칸</p>
+					  	</div>
+					</div>
+				</div>
+				<div class="card__desc-wrap"></div>
+			</div>
+		</div>
+		<script>
+			$(window).scroll(function () {
+				var height = $(document).scrollTop();
+				console.log(height)
+				if(height>=232){
+					$('.item__cate').addClass('item__cart-stick');
+				}
+				else if(height<232){
+					$('.item__cate').removeClass('item__cart-stick')
+				}
+				
+			}); 
+		</script>
+		
+	</div>
+</body>
+</html>

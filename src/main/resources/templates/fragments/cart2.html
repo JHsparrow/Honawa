@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <!-- th:fragment 다른 페이지에 포함시킬 영역을 만들어 준다. -->
+	<div th:fragment="cart">
+		<div class="item-wing__wrap">
+			<div class="item-wing__right">
+				<div class="wing__box">
+					<div class="wing__listBox text-black">
+						<p class="text-center m-4">내 장바구니</p>
+						<div class="wing__list">
+							<p>CPU</p>
+							<p>6티어 상급 CPU</p>
+							<button class="btn btn-primary">해제</button>
+						</div>
+						<div class="wing__list">
+							<p>CPU</p>
+							<p>6티어 상급 CPU</p>
+							<button class="btn btn-primary">해제</button>
+						</div>
+						<div class="wing__list">
+							<p>CPU</p>
+							<p>6티어 상급 CPU</p>
+							<button class="btn btn-primary">해제</button>
+						</div>
+						<div class="wing__list">
+							<p>CPU</p>
+							<p>6티어 상급 CPU</p>
+							<button class="btn btn-primary">해제</button>
+						</div>
+						<div class="wing__list">
+							<p>CPU</p>
+							<p>6티어 상급 CPU</p>
+							<button class="btn btn-primary">해제</button>
+						</div>
+						<div class="wing__list">
+							<p>CPU</p>
+							<p>6티어 상급 CPU</p>
+							<button class="btn btn-primary">해제</button>
+						</div>
+						<div class="wing__list">
+							<p>CPU</p>
+							<p>6티어 상급 CPU</p>
+							<button class="btn btn-primary">해제</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+		$(window).scroll(function () {
+			var height = $(document).scrollTop();
+			console.log(height)
+			if(height>=650){
+				$('.item-wing__right').addClass('fix');
+			}
+			else if(height<650){
+				$('.item-wing__right').removeClass('fix')
+			}
+		}); 
+		
+		</script>
+	</div>
+</body>
+</html>

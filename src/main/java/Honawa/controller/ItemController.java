@@ -17,4 +17,14 @@ public class ItemController {
 		return "item/itemList_as";
 	}
 	
+	@GetMapping(value="detail")
+	public String ShowDetail() {
+		return "item/itemList_detail";
+	}
+	
+	@GetMapping(value="cart")
+	public String ShowCart() {
+		return "item/itemList_cart";
+	}
+	
 }

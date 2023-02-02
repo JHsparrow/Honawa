@@ -17,29 +17,8 @@
 </head>
 <body>
 	<div layout:fragment="content" class="bg-dark text-light">
-		
-		<div class="container-fluid item__section text-center d-flex justify-content-center">
-			<div>
-				<p class="rep_list01">최고의 티어제품</p>
-				<img class="col-3 mx-8" height="300" src="/images/C01.png" >
-				<p class="rep_list01">1티어 상급 CPU</p>
-				<p class="rep_btn"><a href="/items/detail">자세히 보기</a></p>
-			</div>
-			<div>
-				<p class="rep_list02">최고의 갓성비제품</p>
-				<img class="col-3 mx-8" height="300" src="/images/C01.png" >
-				<p class="rep_list02">1티어 상급 CPU</p>
-				<p class="rep_btn"><a href="/items/detail">자세히 보기</a></p>
-			</div>
-			<div>
-				<p class="rep_list03">최고의 인기제품</p>
-				<img class="col-3 mx-8" height="300" src="/images/C01.png" >
-				<p class="rep_list03">1티어 상급 CPU</p>
-				<p class="rep_btn"><a href="/items/detail">자세히 보기</a></p>
-			</div>
-		</div>
 		<div class="text-center item__card ">
-			<div class="item__cate-wrap">
+			<div class="detail__cate-wrap">
 		   		<ul class="item__cate d-flex">
 		      		<li>
 		        		<a class="" aria-current="true" href="#">전체</a>
@@ -65,51 +44,44 @@
 		      		<li class="">
 		        		<a class="" href="#">케이스</a>
 		      		</li>
-		      		
 		    	</ul>
 		  </div>
-		  
-		</div>
-		<div class="container-fluid item__section-sub d-flex">
-			<div class="item__list">
-				<table>
-					<tr class="item__list-wrap">
-						<td>
-							<div class="item__img-con">
-								<img class="item__img">
+		 </div>
+		<div class="container-fluid item__section-sub d-flex mt-0">
+			<div class="detail__list">
+				<span class="detail__title">상품명</span>
+				
+				<div class="d-flex w-80" >
+					<div class="detail__img-con">
+						<img class="detail__img">
+					</div>
+					<div class="w-100">
+							<div class="detail__list-wrap">
+								<div class="detail_desc2">
+									<span class="detail__price">1,000,000원</span>
+								</div>
+								<div class="detail_desc3">
+									<table class="detail__table">
+										<tr class="detail__list-wrap">
+											<td class="pr-4">필요전력 : 300</td>
+										</tr>
+										<tr>
+											<td>재고량 : 30</td>
+										</tr>
+									</table>
+								</div>
 							</div>
-						</td>
-						<td class="item__desc">
-							<p><a class="item__title" >상품명</a></p>
-							<p><a>상품 상세정보</a></p>
-							<div class="item__tag-wrap">
-								<span class="item__tag">태그</span>
+							<div class="text-center detail_desc4">
+								<button class="btn btn-primary mx-4"><i class="fa-solid fa-basket-shopping fa-xl"></i> 상품담기</button>
+								<button class="btn btn-primary mx-4"><i class="fa-solid fa-truck-fast fa-xl"></i> 구매하기</button>
 							</div>
-						</td>
-						<td class="item__price">
-							<p><span>1,000,000</span>원</p>
-							<button>담기-></button>
-						</td>
-					</tr>
-					<tr class="item__list-wrap">
-						<td>
-							<div class="item__img-con">
-								<img class="item__img">
-							</div>
-						</td>
-						<td class="item__desc">
-							<p><a class="item__title" >상품명</a></p>
-							<p><a>상품 상세정보</a></p>
-							<div class="item__tag-wrap">
-								<span class="item__tag">태그</span>
-							</div>
-						</td>
-						<td class="item__price">
-							<p><span>1,000,000</span>원</p>
-							<button>담기-></button>
-						</td>
-					</tr>
-				</table>
+					</div>
+				</div>
+					<div class="detail__tag-wrap">
+					<span class="item__tag">태그</span>
+					<span class="item__tag">태그</span>
+					<span class="item__tag">태그</span>
+				</div>
 			</div>
 			<div class="item__cart">
 				<p class="text-center m-4">내 장바구니</p>
@@ -154,10 +126,10 @@
 			$(window).scroll(function () {
 				var height = $(document).scrollTop();
 				console.log(height)
-				if(height>=995){
+				if(height>=232){
 					$('.item__cate').addClass('item__cart-stick');
 				}
-				else if(height<995){
+				else if(height<232){
 					$('.item__cate').removeClass('item__cart-stick')
 				}
 				

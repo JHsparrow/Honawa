@@ -22,6 +22,8 @@ nav{
   	opacity: 1;
   	border-radius: 10px
 }
+
+
 .hoverable:hover:before, .hoverable:active:before, .hoverable:focus:before{
   opacity: 1;
   transform: translateY(-5px);
@@ -59,7 +61,7 @@ nav{
 .search__btn:hover{
 	background: linear-gradient(-45deg, #E53B38 0%, #9849FD 100%) padding-box, linear-gradient(90deg, #E53B38 0%, #9849FD 100%) border-box;
 }	
-search__boxa:hover, a:focus { animation-duration: 3s; animation-name: rainbowLink; animation-iteration-count: infinite; } 
+/* search__box a:hover, a:focus { animation-duration: 3s; animation-name: rainbowLink; animation-iteration-count: infinite; }  */
 @keyframes rainbowLink {     
  0% { color: #ff2a2a; }
  15% { color: #ff7a2a; }
